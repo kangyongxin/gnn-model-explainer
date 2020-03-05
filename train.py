@@ -870,7 +870,7 @@ def benchmark_task(args, writer=None, feat="node-label"):
     graphs = io_utils.read_graphfile(
         args.datadir, args.bmname, max_nodes=args.max_nodes
     )
-    print(max([G.graph["label"] for G in graphs]))
+    print("-------",max([G.graph["label"] for G in graphs]))
 
     if feat == "node-feat" and "feat_dim" in graphs[0].graph:
         print("Using node features")
@@ -1154,10 +1154,14 @@ def main():
     # use --bmname=[dataset_name] for Reddit-Binary, Mutagenicity
     if prog_args.bmname is not None:
         benchmark_task(prog_args, writer=writer)
+        print("-----a")
     elif prog_args.pkl_fname is not None:
         pkl_task(prog_args)
+        print("-----b")
     elif prog_args.dataset is not None:
+        print("-----c")
         if prog_args.dataset == "syn1":
+            print("----d")
             syn_task1(prog_args, writer=writer)
         elif prog_args.dataset == "syn2":
             syn_task2(prog_args, writer=writer)
