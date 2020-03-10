@@ -35,7 +35,7 @@ class GraphConv(nn.Module):
                 )
             if att:
                 self.att_weight = nn.Parameter(torch.FloatTensor(input_dim, input_dim))
-        else:
+        else:g
             self.weight = nn.Parameter(torch.FloatTensor(input_dim, output_dim).cuda())
             if add_self:
                 self.self_weight = nn.Parameter(
