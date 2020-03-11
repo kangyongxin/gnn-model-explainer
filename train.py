@@ -278,7 +278,9 @@ def train_node_classifier(G, labels, model, args, writer=None):
     scheduler, optimizer = train_utils.build_optimizer(
         args, model.parameters(), weight_decay=args.weight_decay
     )
+    print("before train ---------------------------------")
     model.train()
+    print("after train ---------------------------------")
     ypred = None
     for epoch in range(args.num_epochs):
         begin_time = time.time()
