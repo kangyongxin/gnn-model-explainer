@@ -26,7 +26,7 @@ train.py中的入口函数是main(), 每一个不同的任务会有一个相应�
 
 2.feat == 各种，但是这个feat后来干嘛用了；feat 的含义应该是nodes的feature，或者node的label
 
-3.    train_dataset, val_dataset, test_dataset, max_num_nodes, input_dim, assign_input_dim = prepare_data(
+3.train_dataset, val_dataset, test_dataset, max_num_nodes, input_dim, assign_input_dim = prepare_data(
         graphs, args, max_nodes=args.max_nodes
     )
     用graphs来准备数据，准备数据之后得到的是训练集验证集和测试集，以及最大节点数目，输入维度，assign_input_dim 是什么意思？
